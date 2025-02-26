@@ -1,1 +1,12 @@
 @import "tailwindcss";
+
+
+  .dot.active {
+    @apply w-5 h-5 bg-green-900;
+  }
+  .slides-container {
+    @apply flex justify-center items-center gap-5;
+  }
+  .slide {
+    @apply transition-transform duration-500;
+  }

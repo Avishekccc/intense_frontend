@@ -10,9 +10,9 @@
     />
   </head>
   <body>
-    <nav class=" ">
+    <nav class="h-[82px]">
       <div
-        class="flex justify-between items-center h-[82px] px-[20px] md:px-[50px] lg:px-[70px] 2xl:px-[112px]"
+        class=" fixed z-50 top-0  bg-white w-full h-[82px] flex justify-between items-center  px-[20px] md:px-[50px] lg:px-[70px] 2xl:px-[112px]"
       >
         <div class="">
           <img src="./assets/brand_logo.svg" alt="" class="h-[28px]" />
@@ -56,11 +56,76 @@
           </div>
         </div>
 
-        <div class="lg:hidden">
+        <div class="lg:hidden " onclick="handelMenue()">
           <img src="./assets/menu-02.svg" alt="menue-icon" class="h-[40px]" />
         </div>
+       
       </div>
     </nav>
+
+    <!-- mobile view navbar -->
+
+    <nav id="nav-dialouge" class=" z-50 fixed  inset-0 hidden transition ease-in-out duration-[4000] ">
+      <div class="h-[82px] bg-white flex justify-between items-center  px-[20px] md:px-[50px] lg:px-[70px] 2xl:px-[112px]">
+        <div class="">
+          <img src="./assets/brand_logo.svg" alt="" class="h-[28px]" />
+        </div>
+        <div class="lg:hidden text-[64px] text-[#0A4020]" onclick="handelMenue()">
+          <i class='bx bx-x'></i>
+        </div>
+   
+      </div>
+
+      <div class="w-full h-[460px] bg-[#E7FCED] ">
+          <ul class="flex flex-col justify-center gap-[25px] text-center" >
+              <li>
+                <a
+                  href="#home"
+                  onclick="handelMenue()"
+                  class="nav-link font-bold text-[#0A4020] text-[15px] block p-5 border-t-[1px] border-gray-50 hover:bg-gray-400"
+                  >Features</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  onclick="handelMenue()"
+                  class="nav-link font-bold text-[#0A4020] text-[15px] block p-5 border-t-[1px] border-gray-50 hover:bg-gray-400"
+                  >Solution</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#project"
+                  onclick="handelMenue()"
+                  class="nav-link font-bold text-[#0A4020] text-[15px] block p-5 border-t-[1px] border-gray-50 hover:bg-gray-400"
+                  >Download</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  onclick="handelMenue()"
+                  class="nav-link font-bold text-[#0A4020] text-[15px] block p-5 border-t-[1px] border-gray-50 hover:bg-gray-400"
+                  >Support</a
+                >
+              </li>
+              <li>
+               <div class="flex justify-center items-center p-5  gap-[10px] border-t-[1px] border-gray-50" onclick="handelMenue()">
+            <img
+              src="./assets/nav_login_logo.svg"
+              alt="login_icon"
+              class="h-[15px] w-[15px]"
+            />
+            <span class="text-[#0A4020] text-[15px] font-bold">Login</span>
+          </div>
+              </li>
+            </ul>
+      </div>
+    </nav>
+
+
+
 
     <!-- **************** Hero-Section ******************** -->
 
@@ -76,7 +141,7 @@
             <div class="border-[0.5px] mt-[5px]"></div>
           </div>
           <div
-            class="text-center md:px-[50px] lg:px-[140px] xl:px-[270px] 2xl:px-[350px]"
+            class="text-center md:px-[50px] lg:px-[190px] xl:px-[350px]"
           >
             <h1
               class="text-[32px] md:text-[45px] xl:text-[52px] leading-[30px] md:leading-[56px] lg:leading-[50px] xl:leading-[65px] font-medium"
@@ -85,7 +150,7 @@
             </h1>
           </div>
           <div
-            class="text-center px-[15px] md:px-[2px] lg:px-[50px] xl:px-[200px] 2xl:px-[350px]"
+            class="text-center px-[15px] md:px-[2px] lg:px-[50px] xl:px-[320px]"
           >
             <p class="text-[16px] font-extralight leading-[24px]">
               Boost productivity and manage your team more effectively. Each
@@ -105,12 +170,11 @@
     <!-- **************** features-Section ******************** -->
 
     <section>
-
       <div
-        class="grid grid-cols-1 lg:grid-cols-3 grid-row-2 h-[300px] lg:h-[280px] w-auto px-[15px] md:px-[30px] lg:px-[30px] mt-[50px] lg:mt-[80px] mb-[30px] lg:gap-[40px] xl:gap-[50px]"
+        class="grid grid-cols-1 lg:grid-cols-3 grid-row-2 h-[300px] lg:h-[280px] w-auto px-[15px] md:px-[30px] lg:px-[30px] mt-[50px] lg:mt-[80px] mb-[30px] lg:gap-[40px] xl:gap-[50px] slides-container"
       >
         <div
-          class="hidden col-span-1 row-span-1 lg:flex flex-col items-center text-center bg-[#EEFAF1] px-[28px] py-[40px] gap-[28px] rounded-[12px] border-1 border-[#D7F4DF]"
+          class="hidden col-span-1 row-span-1 lg:flex flex-col items-center text-center bg-[#EEFAF1] px-[28px] py-[40px] gap-[28px] rounded-[12px] border-1 border-[#D7F4DF] slide"
         >
           <div class="bg-white p-[16px] rounded-[14px]">
             <img src="./assets/bank-note-01.svg" alt="" class="" />
@@ -126,7 +190,7 @@
           </div>
         </div>
         <div
-          class="col-span-1 row-span-2 flex flex-col items-center text-center bg-[#EEFAF1] px-[28px] py-[40px] gap-[28px] rounded-[12px] lg:mt-[50px] border-1 border-[#D7F4DF]"
+          class="col-span-1 row-span-2 flex flex-col items-center text-center bg-[#EEFAF1] px-[28px] py-[40px] gap-[28px] rounded-[12px] lg:mt-[50px] border-1 border-[#D7F4DF] slide"
         >
           <div class="bg-white p-[16px] rounded-[14px]">
             <img src="./assets/calendar.svg" alt="" class="" />
@@ -142,7 +206,7 @@
           </div>
         </div>
         <div
-          class="hidden col-span-1 row-span-1 lg:flex flex-col items-center text-center bg-[#EEFAF1] px-[28px] py-[40px] gap-[28px] rounded-[12px] border-1 border-[#D7F4DF]"
+          class="hidden col-span-1 row-span-1 lg:flex flex-col items-center text-center bg-[#EEFAF1] px-[28px] py-[40px] gap-[28px] rounded-[12px] border-1 border-[#D7F4DF] slide"
         >
           <div class="bg-white p-[16px] rounded-[14px]">
             <img src="./assets/wifi-off.svg" alt="" class="" />
@@ -159,7 +223,7 @@
         </div>
       </div>
 
-      <div
+      <!-- <div
         class="flex justify-center items-center gap-[12px] lg:mt-[130px] xl:mt-[100px]"
       >
         <div class="">
@@ -171,7 +235,13 @@
         <div class="">
           <img src="./assets/Ellipse 10.svg" alt="" />
         </div>
-      </div>
+      </div> -->
+
+        <div class="flex justify-center items-center gap-3 lg:mt-32 xl:mt-24">
+    <div class="dot cursor-pointer w-4 h-4 bg-gray-400 rounded-full transition-all duration-300" data-index="0"></div>
+    <div class="dot cursor-pointer w-4 h-4 bg-gray-400 rounded-full transition-all duration-300" data-index="1"></div>
+    <div class="dot cursor-pointer w-4 h-4 bg-gray-400 rounded-full transition-all duration-300" data-index="2"></div>
+  </div>
     </section>
 
 
@@ -192,7 +262,7 @@
           >
             Supercharge Your Productivity
           </h1>
-          <div class="md:px-[100px] lg:px-[170px] xl:px-[270px] 2xl:px-[400px]">
+          <div class="md:px-[100px] lg:px-[170px] xl:px-[400px]">
             <p
               class="text-[#363636] lg:text-[18px] xl:text-[20px] leading-[24px]"
             >
@@ -242,10 +312,13 @@
           </div>
         </div>
 
-        <!-- ------------------card-2-------------------- -->
+        <!-- ------------------card-2-and-3-------------------- -->
 
-        <div
-          class="group h-[220px] w-auto rounded-[18px] bg-[#448260] p-[38px]"
+        <div class="md:flex justify-between gap-[20px] space-y-[20px] md:space-y-0 ">
+        <!-- ------------------card-2-------------------- -->
+              
+           <div
+          class="group h-[220px] w-[360px] rounded-[18px] bg-[#448260] p-[38px]"
         >
           <div class="flex justify-between">
             <h1 class="text-[28px] text-white font-semibold leading-[32px]">
@@ -263,8 +336,9 @@
 
         <!-- ------------------card-3-------------------- -->
 
+
         <div
-          class=" group flex flex-col justify-between h-[220px] w-auto rounded-[18px] bg-[#1B7A84] px-[38px] pt-[30px]"
+          class=" group flex flex-col justify-between h-[220px] w-[360px] rounded-[18px] bg-[#1B7A84] px-[38px] pt-[30px]"
         >
           <div class="relative">
             <h1
@@ -304,16 +378,24 @@
           </div>
         </div>
 
-        <!-- ------------------card-4-------------------- -->
 
-        <div
-          class="group flex flex-col justify-between h-[400px] w-auto rounded-[18px] border-1 border-[#D1DDF2] bg-[#EAF2FF]"
+        </div>
+
+     
+        <!-- ------------------card-4-and-5-------------------- -->
+
+    
+       <div class="md:flex justify-between gap-[20px] space-y-[20px] md:space-y-0">
+
+        <!-- ------------------card-4-------------------- -->
+         <div
+          class="group flex flex-col justify-between h-[400px] w-auto md:w-[342px] rounded-[18px] border-1 border-[#D1DDF2] bg-[#EAF2FF]"
         >
           <div class="space-y-[12px] pr-[25px] pl-[32px] pt-[32px]">
             <h1 class="text-[28px] text-[#09441F] font-semibold leading-[32px]">
               Performance Analytics:
             </h1>
-            <p class="text-[#363636] text-[18px] font-semibold leading-[22px]">
+            <p class="text-[#363636] text-[18px] md:text-[16px] font-semibold leading-[22px]">
               Track productivity and performance with actionable insights
             </p>
           </div>
@@ -366,7 +448,7 @@
         </div>
 
         <!-- ------------------card-5-------------------- -->
-
+        
         <div
           class="group flex flex-col justify-between h-[400px] w-auto rounded-[18px] bg-[#E7FCED] border-1 border-[#D7F4DF]"
         >
@@ -374,7 +456,7 @@
             <h1 class="text-[28px] text-[#09441F] font-semibold leading-[32px]">
               Customizable Dashboards:
             </h1>
-            <p class="text-[#363636] text-[18px] font-semibold leading-[22px]">
+            <p class="text-[#363636] text-[18px] md:text-[16px] font-semibold leading-[22px]">
               Intense Team provides the tools you need and is customizable.
             </p>
           </div>
@@ -400,6 +482,11 @@
           </div>
         </div>
 
+
+      </div>
+        
+
+
         <!-- ------------------card-6-------------------- -->
 
         <div
@@ -418,7 +505,7 @@
             class="ease-in-out duration-800 transform group-hover:-translate-x-3"
           >
             <div
-              class="bg-[#E8EDEA] h-[220px] w-[300px] ml-[100px] rounded-tl-[12px]"
+              class="bg-[#E8EDEA] h-[220px] w-[300px] ml-[100px] md:ml-[420px] rounded-tl-[12px]"
             >
               <div
                 class="flex justify-center items-center text-[14px] text-[#20202099] font-semibold h-[50px]"
@@ -508,7 +595,7 @@
       
   <div class="hidden md:block">
         <div
-        class="hidden lg:grid grid-cols-1 lg:grid-cols-10 grid-row-12 h-[700px]  lg:gap-[20px] px-[15px] md:px-[30px] lg:px-[40px] xl:px-[70px] 2xl:px-[110px] mt-[48px]"
+        class="hidden lg:grid grid-cols-1 lg:grid-cols-10 grid-row-12 h-[700px] lg:gap-[20px] px-[15px] md:px-[30px] lg:px-[40px] xl:px-[70px] 2xl:px-[110px] mt-[48px]"
       >
 
       <!-- --------------------------------grid-1------------------------ -->
@@ -554,16 +641,16 @@
        <div class=" lg:col-span-3 lg:row-span-3  flex justify-between  group rounded-[18px]  bg-[#448260]">
  
     <div class="p-[30px] ">
-      <h1 class="text-[30px] text-white font-semibold leading-[32px]">
+      <h1 class="text-[30px] lg:text-[24px] xl:text-[30px] text-white font-semibold leading-[32px]">
       Real-Time Monitoring
     </h1>
     </div>
     
-    <div class=" h-[170px] pr-[30px] pt-[20px]">
+    <div class=" h-[170px]   pr-[40px] 2xl:pr-[60px] pt-[20px] lg:pt-[50px] xl:pt-[60px] 2xl:pt-[60px]">
        <img 
       src="./assets/desktop_grid_2_img.svg" 
       alt="Monitoring Icon" 
-      class="h-[170px]  object-fill transition-transform transform group-hover:rotate-[-50deg]"
+      class=" lg:scale-150  xl:scale-160 2xl:scale-170 object-fill  transition-transform transform group-hover:rotate-[-50deg]"
     />
     </div>
    
@@ -574,30 +661,30 @@
 
 
         <div class="lg:col-span-3 lg:row-span-6  group flex flex-col justify-between  w-auto rounded-[18px] bg-[#E7FCED] border-1 border-[#D7F4DF]">
-           <div class="pl-[32px] pt-[32px] pb-[50px] pr-[50px] space-y-[12px]">
-            <h1 class="text-[28px] text-[#09441F] font-semibold leading-[24px]">
+           <div class="pl-[32px] lg:pl-[22px] xl:pl-[32px] pt-[32px] pb-[50px] lg:pb-[20px]  xl:pb-[50px] pr-[50px] lg:pr-[30px] xl:pr-[50px] space-y-[12px]">
+            <h1 class="text-[28px] lg:text-[23px] xl:text-[28px] text-[#09441F] font-semibold leading-[24px]">
               Customizable Dashboards:
             </h1>
-            <p class="text-[#363636] text-[18px] font-semibold leading-[18px]">
+            <p class="text-[#363636] text-[18px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px]  font-semibold leading-[18px]">
               Intense Team provides the tools you need and is customizable.
             </p>
           </div>
            
           
           <div class="overflow-clip h-full w-full">
-            <div class="flex justify-center  gap-[20px]">
+            <div class="flex justify-center  gap-[20px] lg:gap-[10px] xl:gap-[25px] 2xl:gap-[20px]">
               <div
-                class=" flex justify-center items-center h-[80px] w-[90px] bg-white border-[1px] border-[#E3E3E3] rounded-[8px] mt-[15px] transform duration-500 ease-in-out group-hover:-translate-x-15 group-hover:-rotate-40"
+                class=" flex justify-center items-center h-[80px] w-[90px] lg:h-[60px] lg:w-[70px]  xl:h-[80px] xl:w-[90px] bg-white border-[1px] border-[#E3E3E3] rounded-[8px] mt-[15px] transform duration-500 ease-in-out group-hover:-translate-x-15 group-hover:-rotate-40"
               >
                 <img src="./assets/home-04.svg" alt="" class="" />
               </div>
               <div
-                class="flex justify-center items-center h-[80px] w-[90px] bg-white border-[1px] border-[#E3E3E3] rounded-[8px] mt-[70px] transform duration-500 ease-in-out group-hover:scale-140 group-hover:rotate-30"
+                class="flex justify-center items-center h-[80px] w-[90px] lg:h-[60px] lg:w-[70px] xl:h-[80px] xl:w-[90px] bg-white border-[1px] border-[#E3E3E3] rounded-[8px] mt-[60px] transform duration-500 ease-in-out group-hover:scale-140 group-hover:rotate-30"
               >
                 <img src="./assets/calendar-minus-01.svg" alt="" />
               </div>
               <div
-                class="flex justify-center items-center h-[80px] w-[90px] bg-white border-[1px] border-[#E3E3E3] rounded-[8px] mt-[110px] transform duration-500 ease-in-out group-hover:-translate-y-5 group-hover:translate-x-15 group-hover:-rotate-20"
+                class="flex justify-center items-center h-[80px] w-[90px] lg:h-[60px] lg:w-[70px] xl:h-[80px] xl:w-[90px] bg-white border-[1px] border-[#E3E3E3] rounded-[8px] mt-[105px] transform duration-500 ease-in-out group-hover:-translate-y-5 group-hover:translate-x-15 group-hover:-rotate-20"
               >
                 <img src="./assets/clock-rewind.png" alt="" />
               </div>
@@ -613,12 +700,12 @@
         <div class="lg:col-span-3 lg:row-span-3   group flex flex-col justify-between   rounded-[18px] bg-[#1B7A84] px-[18px] xl:px-[30px] pt-[20px] xl:pt-[30px]">
          <div class="relative ">
             <h1
-              class="text-[28px] text-white  leading-[32px] transform duration-400 ease-in-out group-hover:-translate-y-2"
+              class="text-[28px] lg:text-[22px] xl:text-[28px] text-white  leading-[32px] transform duration-400 ease-in-out group-hover:-translate-y-2"
             >
               Inactivity Alerts
             </h1>
             <div
-              class="h-[30px] w-[30px] absolute left-[270px] top-[40px] duration-400 ease-in-out group-hover:left-[220px] group-hover:top-[100px] "
+              class="xl:h-[30px] xl:w-[30px] lg:h-[20px] lg:w-[20px] absolute left-[270px] xl:left-[280px] lg:left-[200px] lg:top-[40px]  2xl:top-[40px]  duration-400 ease-in-out xl:group-hover:left-[220px] lg:group-hover:left-[170px] lg:group-hover:top-[90px] xl:group-hover:top-[100px]  "
             >
               <img
                 src="./assets/grid-3 arrow img.svg"
@@ -628,8 +715,8 @@
             </div>
           </div>
 
-                    <div class="overflow-clip w-[188px]">
-            <div class="grid grid-cols-5 grid-row-1 h-[119px] gap-[12px]">
+                    <div class="overflow-clip w-[188px] lg:w-[150px] xl:w-[188px]">
+            <div class="grid grid-cols-5 grid-row-1 h-[119px] gap-[12px] lg:gap-[9px] xl:gap-[12px]">
               <div
                 class="col-span-1 row-span-1 mt-[30px] transition-all duration-400 ease-in-out group-hover:scale-y-120 group-active:scale-y-120 bg-[#E7FCED] group-hover:rounded-tr-[6px] group-hover:rounded-tl-[6px] rounded-tr-[6px] rounded-tl-[6px]"
               ></div>
@@ -656,33 +743,62 @@
 
 
         <div class="lg:col-span-3 lg:row-span-6 group flex flex-col justify-between  w-auto rounded-[18px] border-1 border-[#D1DDF2] bg-[#EAF2FF]">
-          <div class="space-y-[12px] px-[32px] pt-[32px]">
-            <h1 class="text-[28px] text-[#09441F] font-semibold leading-[20px]">
+          <div class="space-y-[12px] px-[32px] pt-[32px] lg:py-[32px] ">
+            <h1 class="text-[28px] lg:text-[22px] xl:text-[28px] text-[#09441F] font-semibold leading-[20px] xl:leading-[26px]">
               Performance Analytics:
             </h1>
-            <p class="text-[#363636] text-[18px] font-semibold leading-[22px]">
+            <p class="text-[#363636] text-[18px] lg:text-[12px] xl:text-[16px] font-semibold leading-[22px]">
               Track productivity and performance with actionable insights
             </p>
           </div>
 
-           <div class="overflow-clip pb-[40px] 2xl:pb-[60px]">
+           <div class="overflow-clip pb-[40px] xl:pb-[60px]">
             <div
-              class="flex items-center gap-[16px] ml-[32px] w-[600px] 2xl:w-[670px] transform ease-in-out duration-800 group-hover:-translate-x-88 "
+              class="flex items-center gap-[16px] ml-[32px] w-[600px] xl:w-[670px] transform ease-in-out duration-800 group-hover:-translate-x-88 "
             >
               <div
-                class="bg-[#FBFBFB] rounded-[12px] h-[140px] 2xl:h-[174px] w-[170px] 2xl:w-[212px] py-[20px] xl:py-[24px] pl-[20px] xl:pl-[24px] pr-[34px] xl:pr-[44px] space-y-[10px] xl:space-y-[16px]"
+                class="bg-[#FBFBFB] rounded-[12px] h-[140px] xl:h-[180px]  2xl:h-[174px] w-[170px] xl:w-[235px] 2xl:w-[212px] py-[20px] xl:py-[24px] pl-[20px] xl:pl-[24px] pr-[34px] xl:pr-[44px] space-y-[10px] xl:space-y-[16px]"
               >
                 <div
-                  class="bg-[#F1F2DE] rounded-full h-[38px] w-[38px] 2xl:h-[48px] 2xl:w-[48px]  flex justify-center items-center"
+                  class="bg-[#F1F2DE] rounded-full h-[38px] w-[38px] xl:h-[48px] xl:w-[48px]  flex justify-center items-center"
                 >
                   <img src="./assets/laptop-01_icon.svg" alt=""  />
                 </div>
                 <div class="space-y-[8px]">
-                  <p class="text-[14px] text-[rgba(32, 32, 32, 0.9)]">Active time</p>
-                  <h1 class="  text-[17px] 2xl:text-[20px] font-semibold">6hrs. 20min.</h1>
+                  <p class="text-[14px] xl:text-[16px] text-[rgba(32, 32, 32, 0.9)]">Active time</p>
+                  <h1 class="  text-[17px] xl:text-[20px] font-semibold">6hrs. 20min.</h1>
                 </div>
               </div>
               <div
+                class="bg-[#FBFBFB] rounded-[12px] h-[140px] xl:h-[180px]  2xl:h-[174px] w-[170px] xl:w-[235px] 2xl:w-[212px] py-[20px] xl:py-[24px] pl-[20px] xl:pl-[24px] pr-[34px] xl:pr-[44px] space-y-[10px] xl:space-y-[16px]"
+              >
+                <div
+                  class="bg-[#F1F2DE] rounded-full h-[38px] w-[38px] xl:h-[48px] xl:w-[48px]  flex justify-center items-center"
+                >
+                     <img src="./assets/lightbulb-05.svg" alt="" />
+
+                </div>
+                <div class="space-y-[8px]">
+                  <p class="text-[14px] xl:text-[16px] text-[rgba(32, 32, 32, 0.9)]">Productive apps</p>
+                  <h1 class="  text-[17px] xl:text-[20px] font-semibold">60%</h1>
+                </div>
+              </div>
+              <div
+                class="bg-[#FBFBFB] rounded-[12px] h-[140px] xl:h-[180px]  2xl:h-[174px] w-[170px] xl:w-[235px] 2xl:w-[212px] py-[20px] xl:py-[24px] pl-[20px] xl:pl-[24px] pr-[34px] xl:pr-[44px] space-y-[10px] xl:space-y-[16px]"
+              >
+                <div
+                  class="bg-[#F1F2DE] rounded-full h-[38px] w-[38px] xl:h-[48px] xl:w-[48px]  flex justify-center items-center"
+                >
+                  <img src="./assets/laptop-01_icon.svg" alt="" />
+                </div>
+                <div class="space-y-[8px]">
+                  <p class="text-[14px] xl:text-[16px] text-[rgba(32, 32, 32, 0.9)]">Idle time spent</p>
+                  <h1 class="  text-[17px] xl:text-[20px] font-semibold">1hr. 15min.</h1>
+                </div>
+              </div>
+
+
+              <!-- <div
                 class="bg-[#FBFBFB] rounded-[12px] h-[140px] 2xl:h-[174px] w-[170px] 2xl:w-[212px] py-[20px] xl:py-[24px] pl-[20px] xl:pl-[24px] pr-[34px] xl:pr-[44px] space-y-[10px] xl:space-y-[16px]"
               >
                 <div
@@ -695,6 +811,7 @@
                   <h1 class="  text-[17px] 2xl:text-[20px] font-semibold">60%</h1>
                 </div>
               </div>
+             
               <div
                 class="bg-[#FBFBFB] rounded-[12px] h-[140px] 2xl:h-[174px] w-[170px] 2xl:w-[212px] py-[20px] xl:py-[24px] pl-[20px] xl:pl-[24px] pr-[34px] xl:pr-[44px] space-y-[10px] xl:space-y-[16px]"
               >
@@ -707,7 +824,7 @@
                   <p class="text-[14px] text-[rgba(32, 32, 32, 0.9)]">Idle time spent</p>
                   <h1 class="  text-[17px] 2xl:text-[20px] font-semibold">1hr. 15min.</h1>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
 
@@ -731,17 +848,17 @@
             class="ease-in-out duration-800 transform group-hover:-translate-x-3"
           >
             <div
-              class="bg-[#E8EDEA] h-[180px] 2xl:h-[220px] w-[250px] 2xl:w-[300px] ml-[80px] xl:ml-[120px] rounded-tl-[12px]"
+              class="bg-[#E8EDEA] h-[180px] xl:h-[225px] w-[250px] xl:w-[290px] 2xl:w-[300px] ml-[80px] xl:ml-[120px] rounded-tl-[12px]"
             >
               <div
-                class="flex justify-center items-center h-[40px] 2xl:h-[50px] text-[14px] text-[#20202099] font-semibold "
+                class="flex justify-center items-center h-[40px] xl:h-[60px] 2xl:h-[50px] text-[14px] text-[#20202099] font-semibold "
               >
                 <p>Employee Name</p>
               </div>
               <div
-                class="flex items-center h-[50px] 2xl:h-[60px] border-b-[1px] border-[#DEDEDE] ease-in-out duration-800 transform group-hover:translate-y-12 xl:group-hover:translate-y-15 group-hover:bg-[#E8F6EC]"
+                class="flex items-center h-[50px] xl:h-[60px] 2xl:h-[60px] border-b-[1px] border-[#DEDEDE] ease-in-out duration-800 transform group-hover:translate-y-12 xl:group-hover:translate-y-12 group-hover:bg-[#E8F6EC]"
               >
-                <div class="flex items-center gap-[20px] 2xl:gap-[50px] pl-[17px]">
+                <div class="flex items-center gap-[20px] xl:gap-[50px] 2xl:gap-[50px] pl-[17px]">
                   <div
                     class="h-[22px] w-[22px] border border-[#D9D9D9] rounded-[6px]"
                   ></div>
@@ -763,7 +880,7 @@
                 </div>
               </div>
               <div
-                class="flex items-center h-[50px] 2xl:h-[60px] border-b-[1px] border-[#DEDEDE] ease-in-out duration-800 transform group-hover:translate-y-12 xl:group-hover:translate-y-15 group-hover:bg-[#E8F6EC] group-hover:rounded-br-[18px]"
+                class="flex items-center h-[50px] xl:h-[60px] 2xl:h-[60px] border-b-[1px] border-[#DEDEDE] ease-in-out duration-800 transform group-hover:translate-y-12 xl:group-hover:translate-y-12 group-hover:bg-[#E8F6EC] group-hover:rounded-br-[18px]"
               >
                 <div class="flex items-center gap-[20px] xl:gap-[50px] pl-[17px]">
                   <div
@@ -787,7 +904,7 @@
                 </div>
               </div>
               <div
-                class="flex items-center h-[50px] 2xl:h-[60px] border-b-[1px] border-[#DEDEDE] transform ease-in-out duration-800 group-hover:-translate-y-25 xl:group-hover:-translate-y-30 group-hover:bg-[#E8F6EC]"
+                class="flex items-center h-[50px] xl:h-[60px] 2xl:h-[60px] border-b-[1px] border-[#DEDEDE] transform ease-in-out duration-800 group-hover:-translate-y-25 xl:group-hover:-translate-y-32 group-hover:bg-[#E8F6EC]"
               >
                 <div class="flex items-center gap-[20px] xl:gap-[50px] pl-[17px]">
                   <div
@@ -821,51 +938,49 @@
 
 <!-- -----------------------features-Section-start---------------- -->
 
-    <section class="lg:border-t-[1px] border-gray-300 mt-[65px] lg:mt-[130px] xl:mt-[260px] 2xl:mt-[310px] ">
+    <section class="lg:border-t-[1px] border-gray-300 mt-[65px] lg:mt-[130px] xl:mt-[350px] 2xl:mt-[310px] ">
       <div class="text-center px-[20px] lg:px-[200px] pt-[50px]  space-y-[20px] 2xl:space-y-[30px] ">
            <h1 class="text-[32px] lg:text-[40px] xl:text-[54px]  text-[#0D2E1B] leading-[40px] font-semibold">Technology that  proves the work</h1>
-      <div class="lg:px-[30px] xl:px-[150px] 2xl:px-[260px]">
+      <div class="lg:px-[30px] xl:px-[280px]">
            <p class="text-[16px] text-[#363636] leading-[24px]">Take control of your team's time and unlock their full potential with smarter, faster, and more efficient tools designed for modern workflows.</p>
       </div>
       </div>
 
       <!-- -------------------------Features_Grids_Start----------------- -->
 
-       <div class="grid grid-cols-1 lg:grid-cols-3 grid-row-6 lg:grid-rows-2 gap-[24px] lg:gap-[12px] px-[20px] lg:px-[30px] xl:px-[70px] 2xl:px-[110px] my-[40px]">
+       <div class="grid grid-cols-1 lg:grid-cols-3 grid-row-6  lg:grid-rows-2 gap-[24px] lg:gap-[12px] px-[20px] lg:px-[30px] xl:px-[70px] 2xl:px-[110px] my-[40px]">
 
-           <div class= "col-span-1 row-span-1 border-[1px] border-[#E6FBB8] rounded-[12px] ">
-          
-             <div class="px-[18px] lg:px-[25px] xl:px-[40px] py-[40px] xl:py-[48px] space-y-[20px] lg:space-y-[25px] xl:space-y-[32px]">
+           <div class= "col-span-1 row-span-1  border-[1px] border-[#E6FBB8] rounded-[12px] "> 
+             <div class="px-[18px] lg:px-[25px] xl:px-[40px] py-[40px] xl:py-[48px] space-y-[20px] lg:space-y-[25px] xl:space-y-[32px] md:flex lg:block flex-col items-center justify-center">
               <div class="">
                 <img src="./assets/features_icon_1_laptop_icon.svg" alt="" class="h-[40px] w-[38px] ">
               </div>
-              <div class="lg:space-y-[4px] xl:space-y-[8px]">
+              <div class="lg:space-y-[4px] xl:space-y-[8px] md:text-center lg:text-left md:px-[150px] lg:px-0">
                 <h1 class="text-[24px] xl:text-[27px]  leading-[38px] text-[#0E3E2F]">Screenshot Tracking</h1>  
                 <p class="text-[#4D4D4D] text-[14px] lg:text-[13px] xl:text-[16px] leading-[22px]" >Capture periodic screenshots to validate work progress and maintain transparency.</p>
               </div>
              </div>
-
-        </div>
-        <div class= "col-span-1 row-span-1 border-[1px] border-[#E6FBB8] rounded-[12px] ">
+          </div>
+        <div class= "col-span-1 row-span-1  border-[1px] border-[#E6FBB8] rounded-[12px] ">
           
-             <div class="px-[18px] lg:px-[25px] xl:px-[40px] py-[40px] xl:py-[48px] space-y-[20px] lg:space-y-[25px] xl:space-y-[32px]">
+             <div class="px-[18px] lg:px-[25px] xl:px-[40px] py-[40px] xl:py-[48px] space-y-[20px] lg:space-y-[25px] xl:space-y-[32px] md:flex lg:block flex-col items-center justify-center">
               <div class="">
                 <img src="./assets/features_icon_2_calendar-plus-01.svg" alt="" class="h-[40px] w-[38px] ">
               </div>
-              <div class="lg:space-y-[4px] xl:space-y-[8px]">
+              <div class="lg:space-y-[4px] xl:space-y-[8px] md:text-center lg:text-left md:px-[150px] lg:px-0">
                 <h1 class="text-[24px] xl:text-[27px]  leading-[38px] text-[#0E3E2F]">Timesheet Management</h1>  
                 <p class="text-[#4D4D4D] text-[14px] lg:text-[13px] xl:text-[16px] leading-[22px]" >Track daily, weekly, or monthly work hours with detailed and editable timesheets.</p>
               </div>
              </div>
 
         </div>
-          <div class= "col-span-1 row-span-1 border-[1px] border-[#E6FBB8] rounded-[12px] ">
+          <div class= "col-span-1 row-span-1  border-[1px] border-[#E6FBB8] rounded-[12px] ">
           
-             <div class="px-[18px] lg:px-[25px] xl:px-[40px] py-[40px] xl:py-[48px] space-y-[20px] lg:space-y-[25px] xl:space-y-[32px]">
+             <div class="px-[18px] lg:px-[25px] xl:px-[40px] py-[40px] xl:py-[48px] space-y-[20px] lg:space-y-[25px] xl:space-y-[32px] md:flex lg:block flex-col items-center justify-center">
               <div class="">
                 <img src="./assets/features_icon_3_hourglass-02.svg" alt="" class="h-[40px] w-[38px]">
               </div>
-              <div class="lg:space-y-[4px] xl:space-y-[8px]">
+              <div class="lg:space-y-[4px] xl:space-y-[8px] md:text-center lg:text-left md:px-[150px] lg:px-0">
                 <h1 class="text-[24px] xl:text-[27px]  leading-[38px] text-[#0E3E2F]">Manual Time Logging</h1>  
                 <p class="text-[#4D4D4D] text-[14px] lg:text-[13px] xl:text-[16px] leading-[22px]" >Allow team members to log hours manually with appropriate permissions for added flexibility.</p>
               </div>
@@ -877,24 +992,24 @@
 
            <div class= "col-span-1 row-span-1 border-[1px] border-[#E6FBB8] rounded-[12px] ">
           
-             <div class="px-[18px] lg:px-[25px] xl:px-[40px] py-[40px] xl:py-[48px] space-y-[20px] lg:space-y-[25px] xl:space-y-[32px]">
+             <div class="px-[18px] lg:px-[25px] xl:px-[40px] py-[40px] xl:py-[48px] space-y-[20px] lg:space-y-[25px] xl:space-y-[32px] md:flex lg:block flex-col items-center justify-center">
               <div class="">
                 <img src="./assets/features_icon_4_zap-fast.svg" alt="" class="h-[40px] w-[38px] ">
               </div>
-              <div class="lg:space-y-[4px] xl:space-y-[8px]">
+              <div class="lg:space-y-[4px] xl:space-y-[8px] md:text-center lg:text-left md:px-[150px] lg:px-0">
                 <h1 class="text-[24px] xl:text-[27px]  leading-[38px] text-[#0E3E2F]">Performance Tracking</h1>  
-                <p class="text-[#4D4D4D] text-[14px] lg:text-[13px] xl:text-[16px] leading-[22px]" >Identify and manage team members with performance or compliance risks.</p>
+                <p class="text-[#4D4D4D] text-[14px] lg:text-[13px] xl:text-[16px] leading-[22px]">Identify and manage team members with performance or compliance risks.</p>
               </div>
              </div>
 
         </div>
         <div class= "col-span-1 row-span-1 border-[1px] border-[#E6FBB8] rounded-[12px] ">
           
-             <div class="px-[18px] lg:px-[25px] xl:px-[40px] py-[40px] xl:py-[48px] space-y-[20px] lg:space-y-[25px] xl:space-y-[32px]">
+             <div class="px-[18px] lg:px-[25px] xl:px-[40px] py-[40px] xl:py-[48px] space-y-[20px] lg:space-y-[25px] xl:space-y-[32px] md:flex lg:block flex-col items-center justify-center">
               <div class="">
                 <img src="./assets/features_icon_5_clock-fast-forward.svg" alt="" class="h-[40px] w-[38px] ">
               </div>
-              <div class="lg:space-y-[4px] xl:space-y-[8px]">
+              <div class="lg:space-y-[4px] xl:space-y-[8px] md:text-center lg:text-left md:px-[150px] lg:px-0">
                 <h1 class="text-[24px] xl:text-[27px]  leading-[38px] text-[#0E3E2F]">Timeline Overview</h1>  
                 <p class="text-[#4D4D4D] text-[14px] lg:text-[13px] xl:text-[16px] leading-[22px]" >Visualize and analyze team workflows and task durations with an intuitive timeline view.</p>
               </div>
@@ -903,11 +1018,11 @@
         </div>
           <div class= "col-span-1 row-span-1 border-[1px] border-[#E6FBB8] rounded-[12px] ">
           
-             <div class="px-[18px] lg:px-[25px] xl:px-[40px] py-[40px] xl:py-[48px] space-y-[20px] lg:space-y-[25px] xl:space-y-[32px]">
+             <div class="px-[18px] lg:px-[25px] xl:px-[40px] py-[40px] xl:py-[48px] space-y-[20px] lg:space-y-[25px] xl:space-y-[32px] md:flex lg:block flex-col items-center justify-center">
               <div class="">
                 <img src="./assets/features_icon_6_file-02.svg" alt="" class="h-[40px] w-[38px]">
               </div>
-              <div class="lg:space-y-[4px] xl:space-y-[8px]">
+              <div class="lg:space-y-[4px] xl:space-y-[8px] md:text-center lg:text-left md:px-[150px] lg:px-0">
                 <h1 class="text-[24px] xl:text-[27px]  leading-[38px] text-[#0E3E2F]">Reports</h1>  
                 <p class="text-[#4D4D4D] text-[14px] lg:text-[13px] xl:text-[16px] leading-[22px]" >Generate detailed reports on performance, productivity, and time allocation for actionable insights.</p>
               </div>
@@ -928,8 +1043,8 @@
         <div class="col-span-1 row-span-1 mb-[40px]">
           <div class="space-y-[16px] xl:space-y-[20px]">
             <h1 class="lg:hidden text-[32px]  text-[#0D2E1B] font-semibold leading-[40px]">Got questions? we've got answers</h1>
-            <h1 class="hidden lg:block lg:text-[54px] xl:text-[64px] 2xl:text-[70px]  text-[#0D2E1B] font-semibold lg:leading-[52px] xl:leading-[60px] 2xl:leading-[62px]">Questions about Our Features</h1>
-            <p class="text-[#0D2E1B] leading-[24px]">Explore our FAQs to learn more about how Intense Team can streamline your workflow and boost productivity.</p>
+            <h1 class="hidden lg:block lg:text-[54px] xl:text-[72px]  text-[#0D2E1B] font-semibold lg:leading-[52px]  xl:leading-[64px]">Questions about Our Features</h1>
+            <p class="text-[#0D2E1B] xl:text-[18px] leading-[24px]">Explore our FAQs to learn more about how Intense Team can streamline your workflow and boost productivity.</p>
           </div>
           <div class="hidden lg:block pl-[48px]  ">
             <img src="./assets/accordian_img_Parent-Group.svg" alt="board-pen image" class="h-[200px]">
@@ -1064,7 +1179,7 @@
           <img src="./assets/demo_desktop_clock_img.svg" alt="">
         </div>
         <div class="text-center px-20px space-y-[32px]">
-          <div class="space-y-[12px] lg:space-y-[22px]  lg:px-[230px] xl:px-[340px] 2xl:px-[380px]">
+          <div class="space-y-[12px] lg:space-y-[22px]  lg:px-[230px] xl:px-[380px]">
           <h1 class="text-[32px] lg:text-[48px] xl:text-[52px] text-[#0D2E1B] font-semibold leading-[40px] lg:leading-[50px] xl:leading-[56px] ">Discover a Better Way to Manage Your Team</h1>
           <div class="px-[20px] lg:px-[10px] text-[#6B7280]">
           <p>Track your team’s progress and improve productivity with Intense Team.</p>
