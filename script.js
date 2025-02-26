@@ -3,36 +3,17 @@ function handelMenue() {
   navDialouge.classList.toggle("hidden");
 }
 
+// Get the elements
+const dropdownToggle = document.getElementById('dropdownToggle');
+const dropdownMenu = document.getElementById('dropdownMenu');
+
+// Toggle the visibility of the dropdown menu on click
+dropdownToggle.addEventListener('click', function () {
+  dropdownMenu.classList.toggle('hidden');
+});
 
 
 
-  // const slidesContainer = document.querySelector(".slides-container");
-  // const slides = Array.from(document.querySelectorAll(".slide"));
-  // const dots = document.querySelectorAll(".dot");
-  // let currentIndex = 1;
-
-  // function updateSlides(index) {
-  //   const newOrder = [...slides.slice(index), ...slides.slice(0, index)];
-  //   slidesContainer.innerHTML = "";
-  //   newOrder.forEach((slide) => slidesContainer.appendChild(slide));
-  // }
-
-  // function updateDots(index) {
-  //   dots.forEach((dot, i) => {
-  //     dot.classList.toggle("active", i === index);
-  //   });
-  // }
-
-  // dots.forEach((dot, index) => {
-  //   dot.addEventListener("click", () => {
-  //     currentIndex = index;
-  //     updateSlides(currentIndex);
-  //     updateDots(currentIndex);
-  //   });
-  // });
-
-  // updateSlides(currentIndex);
-  // updateDots(currentIndex);
  
 
   const slidesContainer = document.querySelector(".slides-container");
