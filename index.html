@@ -30,9 +30,10 @@
         </div>
 
         <div
-          class="hidden lg:flex justify-around items-center lg:gap-[0px] xl:gap-[10px] cursor-pointer"
+          class="hidden relative lg:flex justify-around items-center lg:gap-[0px] xl:gap-[10px] cursor-pointer"
         >
-           <div class="flex items-center lg:gap-[5px] xl:gap-[10px]" id="dropdownToggle">
+        <div class="" >
+            <div class=" flex items-center lg:gap-[5px] xl:gap-[10px]" id="dropdownToggle">
             <img
               src="./assets/english_icon.svg"
               alt=""
@@ -40,13 +41,10 @@
             />
             <span>English</span>
             <i class="bx bx-chevron-down text-2xl"></i>
-          
-         <!-- ------------------Dropdown-------------- -->
-
-          </div>
-          <div id="dropdownMenu" class="dropdown-content absolute top-[60px] left-[1100px]  z-50 px-[15px] py-[10px] bg-gray-50  rounded-[5px] hidden transition ease-in-out duration-1000">
-                 <ul class="space-y-[15px]">
-                  <a href=""><li class="flex items-center text-[#0A4020]  gap-[5px]">
+             <!-- ------------------Dropdown-------------- -->
+              <div id="dropdownMenu" class="dropdown-content  absolute top-[40px] left-[50px]  px-[15px] py-[10px] bg-gray-50 hidden rounded-[5px]  transition ease-in-out duration-1000">
+                 <ul class="space-y-[15px] ">
+                  <a href="#"><li class="flex items-center text-[#0A4020]  gap-[5px]">
                     <div class=" p-1 ">
                     <img src="./assets/united_states_of_america_texture.gif" alt="" class="h-[15px] w-auto object-cover ">
 
@@ -88,7 +86,12 @@
                   </li></a>
                  
                  </ul>
+             </div>
           </div>
+          
+        </div>
+        
+          
         
           
           <div class="flex items-center px-[18px] py-[9px] gap-[10px] cursor-pointer">
@@ -113,7 +116,7 @@
       </div>
     </nav>
 
-    <!-- mobile view navbar -->
+    <!-- ----------------mobile view navbar------------- -->
 
     <nav id="nav-dialouge" class=" z-50 fixed  inset-0 hidden transition ease-in-out duration-1000">
       <div class="h-[82px] bg-white flex justify-between items-center  px-[20px] md:px-[50px] lg:px-[70px] 2xl:px-[112px]">
@@ -174,10 +177,7 @@
       </div>
     </nav>
 
-
-
-
-    <!-- **************** Hero-Section ******************** -->
+    <!-- -------------------------- Hero-Section-start --------------------- -->
 
     <section>
       <div
@@ -217,7 +217,7 @@
       </div>
     </section>
 
-    <!-- **************** features-Section ******************** -->
+    <!-- ------------------------- features-Section-start ------------------- -->
 
     <section>
       <div
@@ -295,7 +295,7 @@
     </section>
 
 
-    <!-- ------------------------grid Section-------------------- -->
+    <!-- ------------------------Bento-grid Section-start-------------------- -->
 
     <section class="mt-[80px] ">
       <div class="flex flex-col items-center gap-[24px] px-[15px]">
@@ -323,6 +323,8 @@
           </div>
         </div>
       </div>
+
+        <!-- ------------------------------Mobile-View-Bento-Grid----------------------------- -->
 
      <div class="block lg:hidden ">
        <div
@@ -365,6 +367,7 @@
         <!-- ------------------card-2-and-3-------------------- -->
 
         <div class="md:flex justify-between gap-[20px] space-y-[20px] md:space-y-0 ">
+
         <!-- ------------------card-2-------------------- -->
               
            <div
@@ -385,7 +388,6 @@
         </div>
 
         <!-- ------------------card-3-------------------- -->
-
 
         <div
           class=" group flex flex-col justify-between h-[220px] w-full md:w-[360px] rounded-[18px] bg-[#1B7A84] px-[38px] pt-[30px]"
@@ -427,7 +429,6 @@
             </div>
           </div>
         </div>
-
 
         </div>
 
@@ -532,10 +533,7 @@
           </div>
         </div>
 
-
       </div>
-        
-
 
         <!-- ------------------card-6-------------------- -->
 
@@ -640,10 +638,9 @@
       </div>
      </div>
 
-     <!-- -----------------------Desktop - view -------------- -->
-
-      
-  <div class="hidden md:block">
+     <!-- -----------------------Desktop - view - Bento-grid -------------- -->
+   
+       <div class="hidden md:block">
         <div
         class="hidden lg:grid grid-cols-1 lg:grid-cols-10 grid-row-12 h-[700px] lg:gap-[20px] px-[15px] md:px-[30px] lg:px-[40px] xl:px-[90px] 2xl:px-[130px] mt-[48px]"
       >
@@ -687,28 +684,24 @@
 
       <!-- --------------------------------grid-2------------------------ -->
 
-
        <div class=" lg:col-span-3 lg:row-span-3  flex justify-between  group rounded-[18px]  bg-[#448260]">
  
-    <div class="p-[30px] ">
-      <h1 class="text-[30px] lg:text-[24px] xl:text-[30px] text-white font-semibold leading-[32px]">
-      Real-Time Monitoring
-    </h1>
-    </div>
+       <div class="p-[30px] ">
+         <h1 class="text-[30px] lg:text-[24px] xl:text-[30px] text-white font-semibold leading-[32px]">
+          Real-Time Monitoring
+        </h1>
+       </div>
     
-    <div class=" h-[170px]   pr-[40px] 2xl:pr-[60px] pt-[20px] lg:pt-[50px] xl:pt-[60px] 2xl:pt-[60px]">
+     <div class=" h-[170px]   pr-[40px] 2xl:pr-[60px] pt-[20px] lg:pt-[50px] xl:pt-[60px] 2xl:pt-[60px]">
        <img 
       src="./assets/desktop_grid_2_img.svg" 
       alt="Monitoring Icon" 
       class=" lg:scale-150  xl:scale-160 2xl:scale-170 object-fill  transition-transform transform group-hover:rotate-[-50deg]"
-    />
-    </div>
-   
-  
-      </div>
+       />
+     </div> 
+       </div>
 
       <!-- --------------------------------grid-3------------------------ -->
-
 
         <div class="lg:col-span-3 lg:row-span-6  group flex flex-col justify-between  w-auto rounded-[18px] bg-[#E7FCED] border-1 border-[#D7F4DF]">
            <div class="pl-[32px] lg:pl-[22px] xl:pl-[32px] pt-[32px] pb-[50px] lg:pb-[20px]  xl:pb-[50px] pr-[50px] lg:pr-[30px] xl:pr-[50px] space-y-[12px]">
@@ -745,8 +738,6 @@
 
       <!-- --------------------------------grid-4------------------------ -->
 
-
-
         <div class="lg:col-span-3 lg:row-span-3   group flex flex-col justify-between   rounded-[18px] bg-[#1B7A84] px-[18px] xl:px-[30px] pt-[20px] xl:pt-[30px]">
          <div class="relative ">
             <h1
@@ -755,7 +746,7 @@
               Inactivity Alerts
             </h1>
             <div
-              class="xl:h-[30px] xl:w-[30px] lg:h-[20px] lg:w-[20px] absolute left-[270px] xl:left-[280px] lg:left-[200px] lg:top-[40px]  2xl:top-[40px]  duration-400 ease-in-out xl:group-hover:left-[220px] lg:group-hover:left-[170px] lg:group-hover:top-[90px] xl:group-hover:top-[100px]  "
+              class="xl:h-[30px] xl:w-[30px] lg:h-[20px] lg:w-[20px] absolute left-[270px] xl:left-[280px] lg:left-[230px] lg:top-[40px]  2xl:top-[40px]  duration-400 ease-in-out xl:group-hover:left-[220px] lg:group-hover:left-[170px] lg:group-hover:top-[90px] xl:group-hover:top-[100px]  "
             >
               <img
                 src="./assets/grid-3 arrow img.svg"
@@ -787,10 +778,7 @@
 
         </div>
 
-
       <!-- --------------------------------grid-5------------------------ -->
-
-
 
         <div class="lg:col-span-3 lg:row-span-6 group flex flex-col justify-between  w-auto rounded-[18px] border-1 border-[#D1DDF2] bg-[#EAF2FF]">
           <div class="space-y-[12px] px-[32px] pt-[32px] lg:py-[32px] ">
@@ -882,7 +870,6 @@
         </div>
 
       <!-- --------------------------------grid-6------------------------ -->
-
 
         <div class="lg:col-span-3 lg:row-span-6  overflow-hidden group-hover:overflow-x-visible group flex flex-col justify-between w-auto rounded-[18px] bg-[#3B5B85]">
           <div class="text-white pl-[20px] pr-[20px] py-[25px] space-y-[7px] xl:pl-[32px] xl:pr-[25px] xl:py-[32px] xl:space-y-[12px]">
@@ -980,13 +967,13 @@
             </div>
           </div>
         </div>
-      </div>
-      </div>
 
+      </div>
+      </div>
      </div>
     </section>
 
-<!-- -----------------------features-Section-start---------------- -->
+      <!-- -----------------------features-Section-start---------------- -->
 
     <section class="lg:border-t-[1px] border-gray-300 mt-[65px] lg:mt-[130px] xl:mt-[350px] 2xl:mt-[310px] ">
       <div class="text-center px-[20px] lg:px-[200px] pt-[50px]  space-y-[20px] 2xl:space-y-[30px] ">
@@ -1077,19 +1064,17 @@
                 <p class="text-[#4D4D4D] text-[14px] lg:text-[13px] xl:text-[16px] leading-[22px]" >Generate detailed reports on performance, productivity, and time allocation for actionable insights.</p>
               </div>
              </div>
-
         </div>
-
-     
-
        </div>
 
     </section>
 
 
 <!-- --------------------Accordian-Section-start------------------- -->
+
     <section class=" mt-[64px] px-[20px] lg:px-[30px] xl:px-[90px] 2xl:px-[130px]">
        <div class="grid grid-col-1 lg:grid-cols-2 grid-row-2 gap-[10px] lg:gap-[10px] xl:gap-[30px] ">
+        
         <div class="col-span-1 row-span-1 mb-[40px]">
           <div class="space-y-[16px] xl:space-y-[20px]">
             <h1 class="lg:hidden text-[32px]  text-[#0D2E1B] font-semibold leading-[40px]">Got questions? we've got answers</h1>
@@ -1103,10 +1088,9 @@
 
 
          <div class="col-span-1 row-span-1">
-
         <!-- -------------------Question-1--------------- -->
 
-            <div class="accordian-header  bg-[#FAFAFA] px-[40px] py-[20px] cursor-pointer">
+          <div class="accordian-header  bg-[#FAFAFA] px-[40px] py-[20px] cursor-pointer">
            <div class="flex items-center justify-between text-[#6B7280] ">
               <ol class="list-decimal">
                 <li class="pr-[60px]"> 
@@ -1120,13 +1104,12 @@
            <i class='bx bx-down-arrow-alt transition-all duration-300' ></i>
           </div>
            </div>
-          </div>
-          
-       <div class="accordian-body hidden text-[#5E5E5E] px-[43px] py-[10px]  bg-white transition-all duration-300">
+          </div>  
+          <div class="accordian-body hidden text-[#5E5E5E] px-[43px] py-[10px]  bg-white transition-all duration-300">
           <p>
              Intense Team enhances productivity by providing real-time monitoring, task management, and performance analytics all in one platform. By tracking live activities, work hours, and engagement levels, teams can identify bottlenecks and improve workflows. With tools like customizable dashboards and inactivity alerts, you can ensure that your team stays focused, organized, and on track to meet deadlines.
          </p>
-       </div>
+          </div>
 
         <!-- -------------------Question-2--------------- -->
           <div class="accordian-header bg-[#FAFAFA] px-[40px] py-[20px] mt-[20px] cursor-pointer">
@@ -1144,11 +1127,11 @@
           </div>
            </div>
           </div>
-       <div class="accordian-body hidden text-[#5E5E5E] px-[43px] py-[10px] bg-white transition-all duration-300">
+          <div class="accordian-body hidden text-[#5E5E5E] px-[43px] py-[10px] bg-white transition-all duration-300">
           <p>
              Intense Team enhances productivity by providing real-time monitoring, task management, and performance analytics all in one platform. By tracking live activities, work hours, and engagement levels, teams can identify bottlenecks and improve workflows. With tools like customizable dashboards and inactivity alerts, you can ensure that your team stays focused, organized, and on track to meet deadlines.
          </p>
-       </div>
+          </div>
          
         <!-- -------------------Question-3--------------- -->
 
@@ -1167,11 +1150,11 @@
           </div>
            </div>
           </div>
-       <div class="accordian-body hidden text-[#5E5E5E] px-[43px] py-[10px] bg-white transition-all duration-300">
+         <div class="accordian-body hidden text-[#5E5E5E] px-[43px] py-[10px] bg-white transition-all duration-300">
           <p>
              Intense Team enhances productivity by providing real-time monitoring, task management, and performance analytics all in one platform. By tracking live activities, work hours, and engagement levels, teams can identify bottlenecks and improve workflows. With tools like customizable dashboards and inactivity alerts, you can ensure that your team stays focused, organized, and on track to meet deadlines.
          </p>
-       </div>
+         </div>
 
         <!-- -------------------Question-4--------------- -->
       
@@ -1190,17 +1173,13 @@
           </div>
            </div>
           </div>
-       <div class="accordian-body hidden text-[#5E5E5E] px-[43px] py-[10px] bg-white transition-all duration-300">
+          <div class="accordian-body hidden text-[#5E5E5E] px-[43px] py-[10px] bg-white transition-all duration-300">
           <p>
              Intense Team enhances productivity by providing real-time monitoring, task management, and performance analytics all in one platform. By tracking live activities, work hours, and engagement levels, teams can identify bottlenecks and improve workflows. With tools like customizable dashboards and inactivity alerts, you can ensure that your team stays focused, organized, and on track to meet deadlines.
-         </p>
+          </p>
+           </div>
+         </div>
        </div>
-
-       </div>
-
-       </div>
-      
-
     </section>
 
 
@@ -1242,9 +1221,7 @@
           <i class='bx bx-chevron-right' ></i>
         </div>
         </div>
-        
-        </div>
-        
+        </div> 
       </div>
     </section>
 
@@ -1301,8 +1278,8 @@
            <div class="w-[176px] space-y-[16px]">
           <div class="text-[24px] lg:text-[14px] text-[#111827] font-semibold">
             <h1>Company</h1>
-          </div>
-          
+
+          </div>  
             <ul class="text-[#6B7280] text-[18px] lg:text-[14px] flex flex-col gap-[12px]  ">
             <a href="#"><li>About</li></a>
             <a href="#"><li>Leadership</li></a>
@@ -1311,9 +1288,8 @@
             <a href="#"><li>Referral Program</li></a>
             <a href="#"><li>Community</li></a>
           </ul>
-          
-          
          </div>
+
            <div class="w-[176px] space-y-[16px]">
           <div class="text-[24px] lg:text-[14px] text-[#111827] font-semibold">
             <h1 >Product</h1>
@@ -1327,6 +1303,7 @@
             <a href="#"><li>Releases</li></a>
           </ul>
          </div>
+
            <div class="w-[176px] space-y-[16px]">
           <div class="text-[24px] lg:text-[14px] text-[#111827] font-semibold">
             <h1 >Support</h1>
@@ -1339,6 +1316,7 @@
             <a href="#"><li>Status</li></a>
           </ul>
          </div>
+
            <div class=" w-[176px] space-y-[16px]">
           <div class="text-[24px] lg:text-[14px] text-[#111827] font-semibold">
             <h1>Industry Solutions</h1>
@@ -1351,6 +1329,7 @@
             <a href="#"><li>Automotive</li></a>
           </ul>
          </div>
+
          <div class="w-[176px] space-y-[16px]">
           <div class="text-[24px] lg:text-[14px] text-[#111827] font-semibold">
             <h1>Legal</h1>
@@ -1361,6 +1340,7 @@
             <a href="#"><li>Terms of Use</li></a>
           </ul>
          </div>
+
          <div class="w-[176px] space-y-[16px]">
           <div class="text-[24px] lg:text-[14px] text-[#111827] font-semibold">
             <h1 >Social</h1>
@@ -1380,9 +1360,7 @@
           <img src="./assets/footer_desktop_view_logo.svg" alt="brand-logo" class="h-[24px]">
           </div>
           <p class="text-[12px] text-white lg:text-[#6B7280]">Copyright 2023 ©Intense Team</p>
-
-         </div>
-        
+         </div> 
       </div>
     </div>
    </footer>

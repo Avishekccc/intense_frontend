@@ -1,21 +1,23 @@
+
+// hmaburger_menu_open_close_logic
 const navDialouge = document.getElementById("nav-dialouge");
 function handelMenue() {
   navDialouge.classList.toggle("hidden");
 }
 
-// Get the elements
+
+
+// Dropdown_menue_Logic
 const dropdownToggle = document.getElementById('dropdownToggle');
 const dropdownMenu = document.getElementById('dropdownMenu');
 
-// Toggle the visibility of the dropdown menu on click
 dropdownToggle.addEventListener('click', function () {
   dropdownMenu.classList.toggle('hidden');
 });
 
 
-
  
-
+// Slider_script
   const slidesContainer = document.querySelector(".slides-container");
   const slides = Array.from(document.querySelectorAll(".slide"));
   const dots = document.querySelectorAll(".dot");
@@ -32,11 +34,11 @@ dropdownToggle.addEventListener('click', function () {
       );
 
       if (i === index) {
-        slide.classList.add("order-2", "scale-100"); // Bring selected slide to the center
+        slide.classList.add("order-2", "scale-100"); 
       } else if (i === (index + 1) % slides.length) {
-        slide.classList.add("order-3", "scale-90", "opacity-100"); // Move next slide to the right
+        slide.classList.add("order-3", "scale-90", "opacity-100"); 
       } else {
-        slide.classList.add("order-1", "scale-90", "opacity-100"); // Move previous slide to the left
+        slide.classList.add("order-1", "scale-90", "opacity-100"); 
       }
     });
   }
@@ -57,16 +59,16 @@ dropdownToggle.addEventListener('click', function () {
     });
   });
 
-  // Set initial state
   updateSlides(1);
   updateDots(1);
 
 
 
 
+// Accordian_Script
 document.querySelectorAll(".accordian-header").forEach((header) => {
   header.addEventListener("click", function () {
-    // Close all other accordions except the clicked one
+    
     document.querySelectorAll(".accordian-header").forEach((otherHeader) => {
       if (otherHeader !== this) {
         otherHeader.classList.remove("bg-[#D5F486]");
@@ -77,7 +79,6 @@ document.querySelectorAll(".accordian-header").forEach((header) => {
           otherBody.classList.add("hidden");
         }
 
-        // Toggle icons inside other headers
         const otherMobileIcon = otherHeader.querySelector(".lg\\:hidden i");
         const otherDesktopIcon = otherHeader.querySelector(".lg\\:block i");
         if (otherMobileIcon) {
@@ -91,17 +92,14 @@ document.querySelectorAll(".accordian-header").forEach((header) => {
       }
     });
 
-    // Toggle background color of clicked header
     this.classList.toggle("bg-[#FAFAFA]");
     this.classList.toggle("bg-[#D5F486]");
 
-    // Toggle the clicked accordion body
     const body = this.nextElementSibling;
     if (body) {
       body.classList.toggle("hidden");
     }
 
-    // Toggle icons for the clicked header
     const mobileIcon = this.querySelector(".lg\\:hidden i");
     const desktopIcon = this.querySelector(".lg\\:block i");
 
