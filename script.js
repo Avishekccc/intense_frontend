@@ -94,6 +94,7 @@ document.querySelectorAll(".accordian-header").forEach((header) => {
 
     this.classList.toggle("bg-[#FAFAFA]");
     this.classList.toggle("bg-[#D5F486]");
+    this.classList.toggle("border-1");
 
     const body = this.nextElementSibling;
     if (body) {

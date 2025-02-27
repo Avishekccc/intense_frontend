@@ -1208,9 +1208,6 @@
   .p-\[38px\] {
     padding: 38px;
   }
-  .px-\[0px\] {
-    padding-inline: 0px;
-  }
   .px-\[14px\] {
     padding-inline: 14px;
   }
@@ -1247,6 +1244,9 @@
   .py-\[4px\] {
     padding-block: 4px;
   }
+  .py-\[5px\] {
+    padding-block: 5px;
+  }
   .py-\[6px\] {
     padding-block: 6px;
   }
@@ -1261,6 +1261,9 @@
   }
   .py-\[14px\] {
     padding-block: 14px;
+  }
+  .py-\[15px\] {
+    padding-block: 15px;
   }
   .py-\[20px\] {
     padding-block: 20px;
@@ -2068,11 +2071,6 @@
       margin-top: calc(var(--spacing) * 32);
     }
   }
-  .lg\:mt-\[50px\] {
-    @media (width >= 64rem) {
-      margin-top: 50px;
-    }
-  }
   .lg\:mt-\[64px\] {
     @media (width >= 64rem) {
       margin-top: 64px;
@@ -2336,6 +2334,11 @@
   .lg\:py-\[8px\] {
     @media (width >= 64rem) {
       padding-block: 8px;
+    }
+  }
+  .lg\:py-\[15px\] {
+    @media (width >= 64rem) {
+      padding-block: 15px;
     }
   }
   .lg\:py-\[32px\] {
